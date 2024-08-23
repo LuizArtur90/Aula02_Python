@@ -543,3 +543,7 @@ print(f"{nome}, seu salário é R${salario:.2f} e seu bônus final é R${bonus_f
 ```
 
 ![imagem_04](./pics/4.png)
+
+
+Manu gatinha
+
