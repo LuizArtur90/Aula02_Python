@@ -39,7 +39,8 @@ try:
         print("Atenção, o valor da variável anual PERCENT deve ser maior que 0")
         exit()
 except ValueError:
-    exit()
+        print("Atenção, o valor da variável anual PERCENT um numero")
+        exit()
 
 #Mensagem final
 print(f"Olá {user}, o seu bônus foi de {bonus_final}.")
