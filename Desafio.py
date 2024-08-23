@@ -34,5 +34,12 @@ except ValueError:
 percent = 1000
 #Cálculo do KPI final
 bonus_final = percent + salario*bonus_user
+try:
+    if percent <= 0:
+        print("Atenção, o valor da variável anual PERCENT deve ser maior que 0")
+        exit()
+except ValueError:
+    exit()
+
 #Mensagem final
 print(f"Olá {user}, o seu bônus foi de {bonus_final}.")
