@@ -1,20 +1,20 @@
 #Entre com o nome do usuário
 user = input("Digite seu nome:")
+#Retorna msg caso user digitar um numero.
 if user.isdigit():
     print("Você digitou o nome errado!")
     exit()
+#Retorna msg caso user digitar espaço.
 elif user.isspace():
     print("Verifique se seu nome foi digitado corretamente.")
     exit()
+#Retorna msg caso user não digitar algo.
 elif len(user) == 0:
     print("Verifique se seu nome foi digitado corretamente.")
     exit()
-#elif user.isprintable():
-    #print("Não é permitido caracter especial no nome.")
-    #exit()
 
 #Entre com o salário do usuário
-salario = float(input("Digite seu salário:"))
+salario = float(input("Digite seu salário somente em números:"))
 try:
     if salario <= 0:
         print("Por favor, digite um valor positivo para o salário.")
@@ -30,10 +30,8 @@ except ValueError:
     print("Entrada inválida para o bônus. Por favor, digite um número.")
     exit()
 
-#Variável que será alterado anualmente
-percent = 1000
-#Cálculo do KPI final
-bonus_final = percent + salario*bonus_user
+#Variável que será alterado anualmente.
+percent = 0
 try:
     if percent <= 0:
         print("Atenção, o valor da variável anual PERCENT deve ser maior que 0")
@@ -41,6 +39,7 @@ try:
 except ValueError:
         print("Atenção, o valor da variável anual PERCENT um numero")
         exit()
-
+#Cálculo do KPI final
+bonus_final = percent + salario*bonus_user
 #Mensagem final
 print(f"Olá {user}, o seu bônus foi de {bonus_final}.")
