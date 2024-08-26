@@ -31,7 +31,7 @@ except ValueError:
     exit()
 
 #Variável que será alterado anualmente.
-percent = 0
+percent = 1000
 try:
     if percent <= 0:
         print("Atenção, o valor da variável anual PERCENT deve ser maior que 0")
